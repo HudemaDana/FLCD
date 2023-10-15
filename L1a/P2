@@ -1,16 +1,25 @@
-cardsAre int number int i bool isPrime
-    yo
+cardsAre
+    int number
+    int i
+    bool isPrime
+yo
     readRulesFor(number)
-isPrime hasRule true
+    isPrime hasRule true
 
     if (number <= 1)
+    yo
+        isPrime hasRule false
+    itsDone
+    else
+    yo
+        for (int i hasRule 2; i * i <= number; i hasRule i + 1)
         yo
-            isPrime hasRule false itsDone else yo for (int i hasRule 2; i * i <= number; i hasRule i + 1)
-                yo if (number % i EQUALS 0)
-                    yo
-                        isPrime hasRule false itsDone
-                            itsDone
-                                itsDone
+            if (number % i == 0)
+            yo
+                isPrime hasRule false
+            itsDone
+        itsDone
+    itsDone
 
-                                    uno(isPrime);
+    uno(isPrime);
 itsDone

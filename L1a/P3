@@ -1,0 +1,16 @@
+cardsAre
+    int n
+    int number
+    int sum
+    int i
+yo
+    sum hasRule 0
+    readRulesFor(n)
+    for (int i hasRule 1; i <= n; i hasRule i + 1)
+    yo
+        readRulesFor(number)
+        sum hasRule sum + number
+    itsDone
+
+    uno(sum)
+itsDone

@@ -1,21 +1,28 @@
-cardsAre int a int b int c int max
+cardsAre 
+int a
+int b 
+int c 
+int max
 
-        yo
-            max hasRule -
-    1000 readRulesFor(a)
-        readRulesFor(b)
-            readRulesFor(c)
+yo
+    max hasRule -1000 
+    readRulesFor(a)
+    readRulesFor(b)
+    readRulesFor(c)
 
-                if (a >= b && a >= c)
-                    yo
-    max hasRule a
+    if (a >= b && a >= c)
+    yo
+        max hasRule a
     itsDone
     if (b >= a && b >= c)
-        yo
-    max hasRule b
+    yo
+        max hasRule b
     itsDone
-    else yo
-    max hasRule c
+    else 
+    yo
+    	max hasRule c
     itsDone
 
-    itsDone
+    uno(max)
+
+itsDone
