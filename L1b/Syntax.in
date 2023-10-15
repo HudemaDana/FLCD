@@ -1,0 +1,29 @@
+program ::= "cardsAre" decllist  compound_stmt 
+decllist ::= declaration | declaration  decllist
+
+compound_stmt ::= "yo" stmt_list "itsDone"
+stmt_list ::= stmt | stmt  stmt_list
+
+stmt ::= assign_stmt | iostmt | compound_stmt | if_stmt | while_stmt | for_stmt
+
+declaration ::= type IDENTIFIER
+type  ::= type1 | array_decl
+type1 ::= "bool" | "char" | "string" | "int" | "float"
+array_decl ::= type1 "pack" "(" nr ")" 
+
+assign_stmt ::= IDENTIFIER "hasRule" expression
+iostmt ::= "readRulesFor" | "uno" "(" IDENTIFIER ")"
+
+if_stmt ::= "if" "(" logical_condition ")" stmt ["else" stmt]
+while_stmt ::= "while" "(" logical_condition ")" stmt
+for_stmt ::= "for" for_header compound_stmt
+for_header ::= "(" "int" assign_stmt ";" condition ";" assign_stmt ")"
+
+expression ::= expression + term | expression - term | term
+term ::= term * factor | term / factor | term % factor |factor
+factor ::= "(" expression ")" | IDENTIFIER
+
+logical_condition ::= condition ["&&" | "||"] condition | condition
+condition ::= expression RELATION expression
+
+RELATION ::= "<" | "<=" | "==" | "!=" | ">=" | ">"

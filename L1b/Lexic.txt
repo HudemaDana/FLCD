@@ -1,0 +1,52 @@
+Alphabet
+a. Letters: upper case (A-Z) lower case (a-z) of the English alphabet
+b. Underline character '_'
+c. Decimal digits (0-9)
+
+
+Lexic
+--------------------------------------
+  a)Special symbols, representing:
+    Operators: 
+        -> +, -, *, /, % (arithmetic)
+        -> == , <=, <, >, >=, != (relational)
+        -> && , || (logical)
+
+    Separators:
+        -> () : ; space
+        
+    Reserved words:
+        ->  int, bool, float,char, string, const, if, else, while, for
+            uno(used instead of WRITE)
+            readRulesFor(used instead of READ)
+            hasRule (used instead of =)
+            cardsAre (used instead of start/program)
+            pack(used instead of array/list)
+            yo (instead of {)
+            itsDone(instead of })
+        
+--------------------------------------
+  b)Identifiers
+        -> a sequence of letters and  digits, such that the first character is a letter; the rule is:
+
+                identifier ::= letter | letter{letter}{digit}
+                letter ::= "A" | "B" | . ..| "Z" | "a" | "b" | ... | "z"
+                digit ::= "0" | "1" |...| "9"
+
+--------------------------------------
+  c)Constants
+    Integer
+
+        noconst:="-"no|no
+        no:=digit{no}
+
+    Character
+
+        character:='letter'|'digit'
+
+    String
+
+        constchar:="string"
+        string:=char{string}
+        char:=letter|digit
+
