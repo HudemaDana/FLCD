@@ -1,4 +1,4 @@
-program ::= "cardsAre" decllist  compound_stmt 
+program ::= "cardsAre" decllist compound_stmt 
 decllist ::= declaration | declaration  decllist
 
 compound_stmt ::= "yo" stmt_list "itsDone"
