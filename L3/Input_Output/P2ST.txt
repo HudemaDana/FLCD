@@ -1,0 +1,4 @@
+5 - [i]
+29 - [isPrime]
+49 - [number]
+
