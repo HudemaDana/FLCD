@@ -19,22 +19,16 @@ public class MyScanner {
             List.of("readRulesFor", "uno", "if", "else", "for", "while", "int", "float", "bool", "true", "false",
                     "char", "string", "cardsAre", "pack", "hasRule", "yo", "itsDone"));
 
-    private String identifierRegex = "^(?!(" + String.join("|", reservedWords) + "$))[a-zA-Z_][a-zA-Z0-9_]*$";
-
-    // private Pattern identifierPattern = Pattern.compile(identifierRegex);
-    private Pattern constantPattern = Pattern
-            .compile("^(0|[1-9]|[1-9][0-9]*|[-+][1-9][0-9]*|'[a-zA-Z]'|\"[0-9]*[a-zA-Z ]*\")$");
-
     private SymbolTable identifierSymbolTable;
     private SymbolTable constantsSymbolTable;
 
-    private final String filePath;
     private ProgramInternalForm pif;
+    private final String filePath;
 
     public MyScanner(String filePath) {
         this.filePath = filePath;
-        this.identifierSymbolTable = new SymbolTable(100);
-        this.constantsSymbolTable = new SymbolTable(100);
+        this.identifierSymbolTable = new SymbolTable(10);
+        this.constantsSymbolTable = new SymbolTable(10);
         this.pif = new ProgramInternalForm();
     }
 
@@ -44,7 +38,6 @@ public class MyScanner {
         while (scanner.hasNextLine()) {
             fileContent.append(scanner.nextLine()).append("\n");
         }
-        // System.out.println(fileContent.toString());
         return fileContent.toString().replace("\t", "");
     }
 
@@ -52,7 +45,6 @@ public class MyScanner {
         try {
             String content = this.readFile();
             String separatorsString = this.separators.stream().reduce("", (a, b) -> (a + b));
-            // System.out.println(separatorsString);
             StringTokenizer tokenizer = new StringTokenizer(content, separatorsString, true);
 
             List<String> tokens = Collections.list(tokenizer)
@@ -71,9 +63,9 @@ public class MyScanner {
     private List<Pair<String, Pair<Integer, Integer>>> tokenize(List<String> tokensToBe) {
 
         List<Pair<String, Pair<Integer, Integer>>> resultedTokens = new ArrayList<>();
+        StringBuilder createdString = new StringBuilder();
         boolean isStringConstant = false;
         boolean isCharConstant = false;
-        StringBuilder createdString = new StringBuilder();
         int numberLine = 1;
         int numberColumn = 1;
 
@@ -118,24 +110,7 @@ public class MyScanner {
         return resultedTokens;
     }
 
-    /**
-     * In this method, we scan the list of created tokens and we classify each of
-     * them in a category:
-     * a) 2 - for reservedWords
-     * b) 3 - for operators
-     * c) 4 - for separators
-     * d) 0 - for constants
-     * e) 1 - for identifiers
-     * If the token is a constant or an identifier we add it to the Symbol Table
-     * After figuring out the category, we add them to the ProgramInternalForm +
-     * their position in the symbol table ( (-1, -1) for anything that is not a
-     * constant and an identifier ) + their category (0, 1, 2, 3, 4)
-     * If the token is not in any of the categories, we print a message with the
-     * line and the column of the error + the token which is invalid.
-     */
-
     public void scan() {
-
         List<Pair<String, Pair<Integer, Integer>>> tokens = createListOfProgramsElems();
         AtomicBoolean lexicalErrorExists = new AtomicBoolean(false);
 
@@ -145,7 +120,6 @@ public class MyScanner {
 
         tokens.forEach(t -> {
             String token = t.getFirst();
-            // System.out.println(token);
             if (this.reservedWords.contains(token)) {
                 this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), 2);
             } else if (this.operators.contains(token)) {
@@ -186,5 +160,4 @@ public class MyScanner {
     public SymbolTable identifierSymbolTable() {
         return this.identifierSymbolTable;
     }
-
 }

@@ -35,5 +35,4 @@ public class SymbolTable {
     public String toString() {
         return hashTable.toString();
     }
-
 }
