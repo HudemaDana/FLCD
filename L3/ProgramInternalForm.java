@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ProgramInternalForm {
     private List<Pair<String, Pair<Integer, Integer>>> tokenPositionPair;
@@ -12,22 +13,37 @@ public class ProgramInternalForm {
     }
 
     public void add(Pair<String, Pair<Integer, Integer>> pair, Integer type) {
+        if (pair.getFirst() != "IDENT" && pair.getFirst() != "CONST" && isTokenInPIF(pair.getFirst()))
+            return;
+
         this.tokenPositionPair.add(pair);
         this.types.add(type);
     }
 
     @Override
     public String toString() {
-        StringBuilder computedString = new StringBuilder();
+        StringBuilder table = new StringBuilder();
+        table.append("Token | Token ID | ST Position\n");
+        table.append("----------------------------\n");
+
         for (int i = 0; i < this.tokenPositionPair.size(); i++) {
-            computedString.append(this.tokenPositionPair.get(i).getFirst())
-                    .append(" | Token id: ")
-                    .append(types.get(i))
-                    .append(" | ST position: ")
-                    .append(this.tokenPositionPair.get(i).getSecond().getFirst())
-                    .append("\n");
+            String token = this.tokenPositionPair.get(i).getFirst();
+            String tokenID = types.get(i).toString();
+            String stPosition = String.valueOf(this.tokenPositionPair.get(i).getSecond().getFirst());
+
+            table.append(String.format("%-20s | %-10s | %-10s\n", token, tokenID, stPosition));
         }
 
-        return computedString.toString();
+        return table.toString();
+    }
+
+    private Boolean isTokenInPIF(String token) {
+        AtomicBoolean isTokenTaken = new AtomicBoolean(false);
+        tokenPositionPair.forEach(pair -> {
+            if (token.contains(pair.getFirst())) {
+                isTokenTaken.set(true);
+            }
+        });
+        return isTokenTaken.get();
     }
 }

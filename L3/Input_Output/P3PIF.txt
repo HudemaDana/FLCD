@@ -1,51 +1,22 @@
-cardsAre | Token id: 101 | ST position: -1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 0
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 1
-hasRule | Token id: 103 | ST position: -1
-CONST | Token id: 0 | ST position: 8
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 0
-) | Token id: 79 | ST position: -1
-for | Token id: 92 | ST position: -1
-( | Token id: 78 | ST position: -1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-hasRule | Token id: 103 | ST position: -1
-CONST | Token id: 0 | ST position: 9
-; | Token id: 81 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-<= | Token id: 72 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 0
-; | Token id: 81 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-+ | Token id: 64 | ST position: -1
-CONST | Token id: 0 | ST position: 9
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 1
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 1
-+ | Token id: 64 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-itsDone | Token id: 105 | ST position: -1
-uno | Token id: 89 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 1
-) | Token id: 79 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
+Token | Token ID | ST Position
+----------------------------
+cardsAre             | 101        | -1        
+int                  | 94         | -1        
+IDENT: { n }         | 1          | 0         
+IDENT: { number }    | 1          | 9         
+IDENT: { sum }       | 1          | 1         
+IDENT: { i }         | 1          | 5         
+yo                   | 104        | -1        
+hasRule              | 103        | -1        
+CONST: { 0 }         | 0          | 8         
+readRulesFor         | 88         | -1        
+(                    | 78         | -1        
+)                    | 79         | -1        
+for                  | 92         | -1        
+CONST: { 1 }         | 0          | 9         
+;                    | 81         | -1        
+<=                   | 72         | -1        
++                    | 64         | -1        
+itsDone              | 105        | -1        
+uno                  | 89         | -1        
 

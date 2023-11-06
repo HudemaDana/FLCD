@@ -149,11 +149,13 @@ public class MyScanner {
             } else if (Pattern.compile("^(0|[1-9]|[1-9][0-9]*|[-+][1-9][0-9]*|'[a-zA-Z]'|\"[0-9]*[a-zA-Z ]*\")$")
                     .matcher(token).matches()) {
                 this.constantsSymbolTable.add(token);
-                this.pif.add(new Pair<>("CONST", constantsSymbolTable.findPositionOfTerm(token)), 0);
+                this.pif.add(new Pair<>("CONST: { " + token + " }", constantsSymbolTable.findPositionOfTerm(token)), 0);
 
             } else if (Pattern.compile("^([a-zA-Z]|_)|[a-zA-Z_0-9]*").matcher(token).matches()) {
                 this.identifierSymbolTable.add(token);
-                this.pif.add(new Pair<>("IDENTIFIER", identifierSymbolTable.findPositionOfTerm(token)), 1);
+                this.pif.add(
+                        new Pair<>("IDENT: { " + token + " }", identifierSymbolTable.findPositionOfTerm(token)),
+                        1);
 
             } else {
                 Pair<Integer, Integer> pairLineColumn = t.getSecond();

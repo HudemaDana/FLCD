@@ -1,67 +1,21 @@
-cardsAre | Token id: 101 | ST position: -1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-hasRule | Token id: 103 | ST position: -1
-CONST | Token id: 0 | ST position: 8
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
-) | Token id: 79 | ST position: -1
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
-) | Token id: 79 | ST position: -1
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-if | Token id: 90 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
->= | Token id: 75 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
-&& | Token id: 69 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
->= | Token id: 75 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
-itsDone | Token id: 105 | ST position: -1
-if | Token id: 90 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
->= | Token id: 75 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 7
-&& | Token id: 69 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
->= | Token id: 75 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 8
-itsDone | Token id: 105 | ST position: -1
-else | Token id: 91 | ST position: -1
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-itsDone | Token id: 105 | ST position: -1
-uno | Token id: 89 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 6
-) | Token id: 79 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
+Token | Token ID | ST Position
+----------------------------
+cardsAre             | 101        | -1        
+int                  | 94         | -1        
+IDENT: { a }         | 1          | 7         
+IDENT: { b }         | 1          | 8         
+IDENT: { c }         | 1          | 9         
+IDENT: { max }       | 1          | 6         
+yo                   | 104        | -1        
+hasRule              | 103        | -1        
+CONST: { -1000 }     | 0          | 8         
+readRulesFor         | 88         | -1        
+(                    | 78         | -1        
+)                    | 79         | -1        
+if                   | 90         | -1        
+>=                   | 75         | -1        
+&&                   | 69         | -1        
+itsDone              | 105        | -1        
+else                 | 91         | -1        
+uno                  | 89         | -1        
 

@@ -1,70 +1,30 @@
-cardsAre | Token id: 101 | ST position: -1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-bool | Token id: 96 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-yo | Token id: 104 | ST position: -1
-readRulesFor | Token id: 88 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-hasRule | Token id: 103 | ST position: -1
-true | Token id: 97 | ST position: -1
-if | Token id: 90 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-<= | Token id: 72 | ST position: -1
-CONST | Token id: 0 | ST position: 9
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-hasRule | Token id: 103 | ST position: -1
-false | Token id: 98 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
-else | Token id: 91 | ST position: -1
-yo | Token id: 104 | ST position: -1
-for | Token id: 92 | ST position: -1
-( | Token id: 78 | ST position: -1
-int | Token id: 94 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-hasRule | Token id: 103 | ST position: -1
-CONST | Token id: 0 | ST position: 0
-; | Token id: 81 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-* | Token id: 66 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-<= | Token id: 72 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-; | Token id: 81 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-hasRule | Token id: 103 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-+ | Token id: 64 | ST position: -1
-CONST | Token id: 0 | ST position: 9
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-if | Token id: 90 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-% | Token id: 68 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 5
-== | Token id: 71 | ST position: -1
-CONST | Token id: 0 | ST position: 8
-) | Token id: 79 | ST position: -1
-yo | Token id: 104 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-hasRule | Token id: 103 | ST position: -1
-false | Token id: 98 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
-uno | Token id: 89 | ST position: -1
-( | Token id: 78 | ST position: -1
-IDENTIFIER | Token id: 1 | ST position: 9
-) | Token id: 79 | ST position: -1
-; | Token id: 81 | ST position: -1
-itsDone | Token id: 105 | ST position: -1
+Token | Token ID | ST Position
+----------------------------
+cardsAre             | 101        | -1        
+int                  | 94         | -1        
+IDENT: { number }    | 1          | 9         
+IDENT: { i }         | 1          | 5         
+bool                 | 96         | -1        
+IDENT: { isPrime }   | 1          | 9         
+yo                   | 104        | -1        
+readRulesFor         | 88         | -1        
+(                    | 78         | -1        
+)                    | 79         | -1        
+hasRule              | 103        | -1        
+true                 | 97         | -1        
+if                   | 90         | -1        
+<=                   | 72         | -1        
+CONST: { 1 }         | 0          | 9         
+false                | 98         | -1        
+itsDone              | 105        | -1        
+else                 | 91         | -1        
+for                  | 92         | -1        
+CONST: { 2 }         | 0          | 0         
+;                    | 81         | -1        
+*                    | 66         | -1        
++                    | 64         | -1        
+%                    | 68         | -1        
+==                   | 71         | -1        
+CONST: { 0 }         | 0          | 8         
+uno                  | 89         | -1        
 
