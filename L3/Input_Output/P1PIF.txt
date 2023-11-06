@@ -1,21 +1,21 @@
-Token | Token ID | ST Position
+Token 				| Token ID 		| ST Position
 ----------------------------
-cardsAre             | 101        | -1        
-int                  | 94         | -1        
-IDENT: { a }         | 1          | 7         
-IDENT: { b }         | 1          | 8         
-IDENT: { c }         | 1          | 9         
-IDENT: { max }       | 1          | 6         
-yo                   | 104        | -1        
-hasRule              | 103        | -1        
-CONST: { -1000 }     | 0          | 8         
-readRulesFor         | 88         | -1        
-(                    | 78         | -1        
-)                    | 79         | -1        
-if                   | 90         | -1        
->=                   | 75         | -1        
-&&                   | 69         | -1        
-itsDone              | 105        | -1        
-else                 | 91         | -1        
-uno                  | 89         | -1        
+cardsAre             | 39         | [-1,-1]   
+int                  | 32         | [-1,-1]   
+IDENT: { a }         | 1          | [7,0]     
+IDENT: { b }         | 1          | [8,0]     
+IDENT: { c }         | 1          | [9,0]     
+IDENT: { max }       | 1          | [6,0]     
+yo                   | 42         | [-1,-1]   
+hasRule              | 41         | [-1,-1]   
+CONST: { -1000 }     | 0          | [8,0]     
+readRulesFor         | 26         | [-1,-1]   
+(                    | 16         | [-1,-1]   
+)                    | 17         | [-1,-1]   
+if                   | 28         | [-1,-1]   
+>=                   | 13         | [-1,-1]   
+&&                   | 7          | [-1,-1]   
+itsDone              | 43         | [-1,-1]   
+else                 | 29         | [-1,-1]   
+uno                  | 27         | [-1,-1]   
 

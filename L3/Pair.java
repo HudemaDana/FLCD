@@ -1,4 +1,4 @@
-public class Pair<First,Second> {
+public class Pair<First, Second> {
     private final First first;
     private final Second second;
 
@@ -17,9 +17,8 @@ public class Pair<First,Second> {
 
     @Override
     public String toString() {
-        return "Pair{" +
-                "first=" + first +
-                ", second=" + second +
-                '}';
+        return "[" + first +
+                "," + second +
+                ']';
     }
 }

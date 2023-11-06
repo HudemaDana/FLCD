@@ -23,13 +23,13 @@ public class ProgramInternalForm {
     @Override
     public String toString() {
         StringBuilder table = new StringBuilder();
-        table.append("Token | Token ID | ST Position\n");
+        table.append("Token \t\t\t\t| Token ID \t\t| ST Position\n");
         table.append("----------------------------\n");
 
         for (int i = 0; i < this.tokenPositionPair.size(); i++) {
             String token = this.tokenPositionPair.get(i).getFirst();
             String tokenID = types.get(i).toString();
-            String stPosition = String.valueOf(this.tokenPositionPair.get(i).getSecond().getFirst());
+            String stPosition = String.valueOf(this.tokenPositionPair.get(i).getSecond());
 
             table.append(String.format("%-20s | %-10s | %-10s\n", token, tokenID, stPosition));
         }
