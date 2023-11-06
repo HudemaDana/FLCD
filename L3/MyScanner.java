@@ -1,5 +1,8 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,6 +33,23 @@ public class MyScanner {
         this.identifierSymbolTable = new SymbolTable(10);
         this.constantsSymbolTable = new SymbolTable(10);
         this.pif = new ProgramInternalForm();
+    }
+
+    private static Integer findLineInFile(String searchString) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Token.in"))) {
+            String line;
+            int lineNumber = 0;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains(searchString)) {
+                    return lineNumber;
+                }
+                lineNumber++;
+            }
+            return -1;
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            return -1;
+        }
     }
 
     private String readFile() throws FileNotFoundException {
@@ -121,11 +141,11 @@ public class MyScanner {
         tokens.forEach(t -> {
             String token = t.getFirst();
             if (this.reservedWords.contains(token)) {
-                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), 2);
+                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), findLineInFile(token));
             } else if (this.operators.contains(token)) {
-                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), 3);
+                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), findLineInFile(token));
             } else if (this.separators.contains(token)) {
-                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), 4);
+                this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), findLineInFile(token));
             } else if (Pattern.compile("^(0|[1-9]|[1-9][0-9]*|[-+][1-9][0-9]*|'[a-zA-Z]'|\"[0-9]*[a-zA-Z ]*\")$")
                     .matcher(token).matches()) {
                 this.constantsSymbolTable.add(token);

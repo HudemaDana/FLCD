@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProgramInternalForm {
-        private List<Pair<String, Pair<Integer, Integer>>> tokenPositionPair;
+    private List<Pair<String, Pair<Integer, Integer>>> tokenPositionPair;
 
     private List<Integer> types;
 
@@ -11,20 +11,20 @@ public class ProgramInternalForm {
         this.types = new ArrayList<>();
     }
 
-    public void add(Pair<String, Pair<Integer, Integer>> pair, Integer type){
+    public void add(Pair<String, Pair<Integer, Integer>> pair, Integer type) {
         this.tokenPositionPair.add(pair);
         this.types.add(type);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder computedString = new StringBuilder();
-        for(int i = 0; i < this.tokenPositionPair.size(); i++) {
+        for (int i = 0; i < this.tokenPositionPair.size(); i++) {
             computedString.append(this.tokenPositionPair.get(i).getFirst())
-                    .append(" - ")
-                    .append(this.tokenPositionPair.get(i).getSecond())
-                    .append(" -> ")
+                    .append(" | Token id: ")
                     .append(types.get(i))
+                    .append(" | ST position: ")
+                    .append(this.tokenPositionPair.get(i).getSecond().getFirst())
                     .append("\n");
         }
 

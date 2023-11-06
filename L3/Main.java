@@ -13,8 +13,8 @@ public class Main {
     private static void run(String filePath) {
         MyScanner scanner = new MyScanner(filePath);
         scanner.scan();
-        printToFile(filePath.replace(".txt", "ST.txt"),
-                scanner.constantSymbolTable().toString() + scanner.identifierSymbolTable().toString());
+        printToFile(filePath.replace(".txt", "STConstants.txt"), scanner.constantSymbolTable());
+        printToFile(filePath.replace(".txt", "STIdentifiers.txt"), scanner.identifierSymbolTable());
         printToFile(filePath.replace(".txt", "PIF.txt"), scanner.getPif());
     }
 

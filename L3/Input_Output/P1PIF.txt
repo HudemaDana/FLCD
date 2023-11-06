@@ -1,67 +1,67 @@
-cardsAre - Pair{first=-1, second=-1} -> 2
-int - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=97, second=0} -> 1
-int - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=98, second=0} -> 1
-int - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=99, second=0} -> 1
-int - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=26, second=0} -> 1
-yo - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=26, second=0} -> 1
-hasRule - Pair{first=-1, second=-1} -> 2
-CONST - Pair{first=38, second=0} -> 0
-readRulesFor - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=97, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-readRulesFor - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=98, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-readRulesFor - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=99, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-if - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=97, second=0} -> 1
->= - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=98, second=0} -> 1
-&& - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=97, second=0} -> 1
->= - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=99, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-yo - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=26, second=0} -> 1
-hasRule - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=97, second=0} -> 1
-itsDone - Pair{first=-1, second=-1} -> 2
-if - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=98, second=0} -> 1
->= - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=97, second=0} -> 1
-&& - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=98, second=0} -> 1
->= - Pair{first=-1, second=-1} -> 3
-IDENTIFIER - Pair{first=99, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-yo - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=26, second=0} -> 1
-hasRule - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=98, second=0} -> 1
-itsDone - Pair{first=-1, second=-1} -> 2
-else - Pair{first=-1, second=-1} -> 2
-yo - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=26, second=0} -> 1
-hasRule - Pair{first=-1, second=-1} -> 2
-IDENTIFIER - Pair{first=99, second=0} -> 1
-itsDone - Pair{first=-1, second=-1} -> 2
-uno - Pair{first=-1, second=-1} -> 2
-( - Pair{first=-1, second=-1} -> 4
-IDENTIFIER - Pair{first=26, second=0} -> 1
-) - Pair{first=-1, second=-1} -> 4
-itsDone - Pair{first=-1, second=-1} -> 2
+cardsAre | Token id: 101 | ST position: -1
+int | Token id: 94 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+int | Token id: 94 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+int | Token id: 94 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 9
+int | Token id: 94 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+yo | Token id: 104 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+hasRule | Token id: 103 | ST position: -1
+CONST | Token id: 0 | ST position: 8
+readRulesFor | Token id: 88 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+) | Token id: 79 | ST position: -1
+readRulesFor | Token id: 88 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+) | Token id: 79 | ST position: -1
+readRulesFor | Token id: 88 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 9
+) | Token id: 79 | ST position: -1
+if | Token id: 90 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+>= | Token id: 75 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+&& | Token id: 69 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+>= | Token id: 75 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 9
+) | Token id: 79 | ST position: -1
+yo | Token id: 104 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+hasRule | Token id: 103 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+itsDone | Token id: 105 | ST position: -1
+if | Token id: 90 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+>= | Token id: 75 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 7
+&& | Token id: 69 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+>= | Token id: 75 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 9
+) | Token id: 79 | ST position: -1
+yo | Token id: 104 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+hasRule | Token id: 103 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 8
+itsDone | Token id: 105 | ST position: -1
+else | Token id: 91 | ST position: -1
+yo | Token id: 104 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+hasRule | Token id: 103 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 9
+itsDone | Token id: 105 | ST position: -1
+uno | Token id: 89 | ST position: -1
+( | Token id: 78 | ST position: -1
+IDENTIFIER | Token id: 1 | ST position: 6
+) | Token id: 79 | ST position: -1
+itsDone | Token id: 105 | ST position: -1
 
