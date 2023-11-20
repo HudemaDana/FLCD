@@ -28,11 +28,22 @@ public class MyScanner {
     private ProgramInternalForm pif;
     private final String filePath;
 
+    private FiniteAutomaton fa_identifier = new FiniteAutomaton("Input_Output/FA_Identifier.txt");
+    private FiniteAutomaton fa_constant = new FiniteAutomaton("Input_Output/FA_integer_constants.txt");
+
     public MyScanner(String filePath) {
         this.filePath = filePath;
         this.identifierSymbolTable = new SymbolTable(10);
         this.constantsSymbolTable = new SymbolTable(10);
         this.pif = new ProgramInternalForm();
+    }
+
+    public boolean isValidIdentifier(String token) {
+        return fa_identifier.acceptsSequence(token);
+    }
+
+    public boolean isValidConstant(String token) {
+        return fa_constant.acceptsSequence(token);
     }
 
     private static Integer findLineInFile(String searchString) {
@@ -146,12 +157,11 @@ public class MyScanner {
                 this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), findLineInFile(token));
             } else if (this.separators.contains(token)) {
                 this.pif.add(new Pair<>(token, new Pair<>(-1, -1)), findLineInFile(token));
-            } else if (Pattern.compile("^(0|[1-9]|[1-9][0-9]*|[-+][1-9][0-9]*|'[a-zA-Z]'|\"[0-9]*[a-zA-Z ]*\")$")
-                    .matcher(token).matches()) {
+            } else if (isValidConstant(token)) {
                 this.constantsSymbolTable.add(token);
                 this.pif.add(new Pair<>("CONST: { " + token + " }", constantsSymbolTable.findPositionOfTerm(token)), 0);
 
-            } else if (Pattern.compile("^([a-zA-Z]|_)|[a-zA-Z_0-9]*").matcher(token).matches()) {
+            } else if (isValidIdentifier(token)) {
                 this.identifierSymbolTable.add(token);
                 this.pif.add(
                         new Pair<>("IDENT: { " + token + " }", identifierSymbolTable.findPositionOfTerm(token)),

@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class FiniteAutomaton {
+
     private final String ELEM_SEPARATOR = ";";
 
     private boolean isDeterministic;
@@ -15,7 +16,7 @@ public class FiniteAutomaton {
 
     private List<String> finalStates;
 
-    private final Map<Pair<String, String>, Set<String>> transitions;
+    private final Map<Transition, Set<String>> transitions;
 
     /**
      * This method reads the content of the Finite Automaton from the file and
@@ -44,7 +45,7 @@ public class FiniteAutomaton {
                 if (states.contains(transitionComponents[0]) && states.contains(transitionComponents[2])
                         && alphabet.contains(transitionComponents[1])) {
 
-                    Pair<String, String> transitionStates = new Pair<>(transitionComponents[0],
+                    Transition transitionStates = new Transition(transitionComponents[0],
                             transitionComponents[1]);
 
                     if (!transitions.containsKey(transitionStates)) {
@@ -111,7 +112,7 @@ public class FiniteAutomaton {
     /**
      * @return the transitions of the FA
      */
-    public Map<Pair<String, String>, Set<String>> getTransitions() {
+    public Map<Transition, Set<String>> getTransitions() {
         return this.transitions;
     }
 
@@ -119,7 +120,7 @@ public class FiniteAutomaton {
         StringBuilder builder = new StringBuilder();
         builder.append("Transitions: \n");
         transitions.forEach((K, V) -> {
-            builder.append("<").append(K.getFirst()).append(",").append(K.getSecond()).append("> -> ").append(V)
+            builder.append("<").append(K.getState()).append(",").append(K.getSymbol()).append("> -> ").append(V)
                     .append("\n");
         });
 
@@ -146,7 +147,7 @@ public class FiniteAutomaton {
         for (int i = 0; i < sequence.length(); i++) {
 
             String currentSymbol = sequence.substring(i, i + 1);
-            Pair<String, String> transition = new Pair<>(currentState, currentSymbol);
+            Transition transition = new Transition(currentState, currentSymbol);
             if (!this.transitions.containsKey(transition)) {
                 return false;
             } else {

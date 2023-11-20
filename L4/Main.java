@@ -33,7 +33,7 @@ public class Main {
 
     private static void optionsForDFA() {
 
-        FiniteAutomaton finiteAutomaton = new FiniteAutomaton("Input_Output/FA.txt");
+        FiniteAutomaton finiteAutomaton = new FiniteAutomaton("Input_Output/FA_Identifier.txt");
 
         System.out.println("FA read from file.");
         printMenu();
