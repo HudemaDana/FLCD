@@ -1,0 +1,24 @@
+cardsAre
+int a,b,c,max
+
+yo
+    max hasRulee -10c00
+    readRulesFor(a)
+    readRulesFor(b)
+    readRulesFor(c)
+
+    if(a >= b && a >= c)
+    yo
+        max hasRule a
+    itsDone
+    if(b >= a && b >= c)
+    yo 
+        max hasRule b
+    itsDone
+    else
+    yo
+        max hasRule c
+    itsDone
+
+    uno(max)
+itsDone
